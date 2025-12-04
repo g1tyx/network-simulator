@@ -16,7 +16,7 @@ const AscensionButton = {
         handleAscend() {
             if (!this.canAscend) return;
             
-            const message = `Ascend and reset your progress?\n\nYou will earn: ${this.coresEarned} Quantum Core${this.coresEarned !== 1 ? 's' : ''}\n\nThis will reset:\n- All resources\n- All unlocked nodes (except Core)\n- All automation\n\nQuantum Cores persist and can be spent on permanent upgrades.`;
+            const message = `转生并重置你的进度?\n\n你将获得: ${this.coresEarned} 量子核心${this.coresEarned !== 1 ? '' : ''}\n\n这将重置:\n- 所有资源\n- 所有解锁的节点 (核心除外)\n- 所有自动化\n\n量子核心会持续存在，并且可以用于永久的升级.`;
             
             if (confirm(message)) {
                 this.$emit('ascend');
